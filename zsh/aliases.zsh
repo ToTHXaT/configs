@@ -5,9 +5,6 @@ alias venv='python3 -m venv '
 alias dj='python3 manage.py '
 alias penv='pipenv '
 
-
-
-
 alias ls='exa --color=always --group-directories-first' 
 alias la='exa -a --color=always --group-directories-first' 
 alias lla='exa -la --color=always --group-directories-first'  
@@ -37,6 +34,7 @@ alias path="echo \$PATH | tr \":\" \"\n\" | nl "
 
 alias nv='nvim '
 alias vim='nvim -u $HOME/.config/nvim/init2.lua '
+alias hx='helix '
 
 alias tm='tmux '
 alias tmns='tmux new-session -s '
