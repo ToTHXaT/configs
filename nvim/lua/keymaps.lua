@@ -12,7 +12,6 @@ vim.cmd[[
     vnoremap < <gv
     vnoremap > >gv
 
-    inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     nnoremap <silent><space>j <C-w>h
     nnoremap <silent><space>k <C-w>j
     nnoremap <silent><space>l <C-w>k
@@ -29,3 +28,5 @@ vim.cmd[[
     nnoremap <silent><M-j> :vertical resize -2<CR>
     nnoremap <silent><M-;> :vertical resize +2<CR>
 ]]
+
+--inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"

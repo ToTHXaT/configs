@@ -29,6 +29,7 @@ alias more=less
 alias fin='la | grep --color=none '
 alias xclip='xclip -selection c '
 alias cpwd='pwd | xclip'
+alias sys='sudo systemctl '
 
 alias path="echo \$PATH | tr \":\" \"\n\" | nl "
 
@@ -48,6 +49,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH="${PATH}:/home/ainur/.nvm/versions/node/v17.3.1/bin/"
 
 alias rng='source ranger '
+alias load_ems='source /etc/profile.d/emscripten.sh'
 
 #alias randfile='find . -type f | shuf -n 1'
 #alias randvideo='vlc `randfile`'
@@ -55,6 +57,7 @@ alias rng='source ranger '
 #export NVIM_CONFIG=~/.config/nvim
 
 export MY_SERVER_IP="176.57.220.212"
+export MY_SERVER_IP_2="206.188.196.184"
 
 
 function pm() {
