@@ -4,6 +4,7 @@ alias pip='pip3 '
 alias venv='python3 -m venv '
 alias dj='python3 manage.py '
 alias penv='pipenv '
+alias pty='poetry '
 
 alias ls='exa --color=always --group-directories-first' 
 alias la='exa -a --color=always --group-directories-first' 
@@ -24,11 +25,8 @@ alias rm='rm -i'
  
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
 alias more=less
-alias fin='la | grep --color=none '
 alias xclip='xclip -selection c '
-alias cpwd='pwd | xclip'
 alias sys='sudo systemctl '
 
 alias path="echo \$PATH | tr \":\" \"\n\" | nl "
@@ -44,21 +42,10 @@ alias tma='tmux at'
 alias tmas='tmux attach-session -t '
 alias tmks='tmux kill-session -t '
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-export PATH="${PATH}:/home/ainur/.nvm/versions/node/v17.3.1/bin/"
-
 alias rng='source ranger '
-alias load_ems='source /etc/profile.d/emscripten.sh'
-
-#alias randfile='find . -type f | shuf -n 1'
-#alias randvideo='vlc `randfile`'
-
-#export NVIM_CONFIG=~/.config/nvim
 
 export MY_SERVER_IP="176.57.220.212"
 export MY_SERVER_IP_2="206.188.196.184"
-
 
 function pm() {
     cmd=$1

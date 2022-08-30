@@ -9,8 +9,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 10 && dunst
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10 -steps 1 -time 0 ; dunstify \\"`/home/ainur/Files/Projects/Rust/light_sound_bar/target/release/light_sound_bar light`\\" -u LOW -r 1011"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10 -steps 1 -time 0; dunstify \\"`/home/ainur/Files/Projects/Rust/light_sound_bar/target/release/light_sound_bar light`\\" -u LOW -r 1011"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10 -steps 1 -time 0 ; dunstify `xbacklight -get` -u LOW -r 1011"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10 -steps 1 -time 0; dunstify `xbacklight -get` -u LOW -r 1011"
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -19,7 +19,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun -dpi 196 -theme Arc-Dark
 
 # change focus
 bindsym $mod+j focus left
@@ -72,11 +72,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-bindsym $mod+Mod1+t exec xrandr --output eDP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
-bindsym $mod+Mod1+y exec xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP1 --off --output HDMI1 --off --output VIRTUAL1 --off
-bindsym $mod+Mod1+g exec xrandr --output eDP1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output VIRTUAL1 --off
-
-
 bindsym Print exec --no-startup-id flameshot gui 
 bindsym $mod+Print --release exec --no-startup-id flameshot gui 
 bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui 
@@ -94,7 +89,7 @@ bindsym $mod+Shift+p exec "killall picom ; picom -b"
 
 
 ## Autostart
-exec --no-startup-id nm-applet
+exec --no-startup-id GDK_SCALE=2 GDK_DPI_SCALE=0.8 nm-applet
 exec --no-startup-id dunst
 
 exec --no-startup-id nitrogen --restore
@@ -118,8 +113,8 @@ default_border pixel 1
 default_floating_border pixel 1
 smart_borders on
 
-gaps inner 10 
-gaps outer 2 
+gaps inner 10
+gaps outer 2
 hide_edge_borders none
 
 
@@ -201,7 +196,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+m bar mode toggle
 
 bar {
-    font pango:Source Code Pro Medium
+    font pango: Source Code Variable 14
     status_command i3blocks
 	i3bar_command i3bar
 	position top
