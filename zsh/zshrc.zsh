@@ -16,7 +16,7 @@ compinit
 #Antigen Start
 source /usr/share/zsh/share/antigen.zsh
 
-antigen bundle git
+# antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 

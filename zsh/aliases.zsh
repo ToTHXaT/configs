@@ -44,8 +44,31 @@ alias tmks='tmux kill-session -t '
 
 alias rng='source ranger '
 
-export MY_SERVER_IP="176.57.220.212"
-export MY_SERVER_IP_2="206.188.196.184"
+# git 
+alias gb='git branch '
+alias gbc='git branch --show-current '
+alias gbl='git branch --list '
+alias gbD='git branch --delete '
+
+alias gs='git status --short --branch '
+alias gsl='git status '
+
+alias ga='git add '
+alias gai='git add -i '
+alias gaa='git add -a '
+
+alias gcm='git commit -m '
+
+alias gl='git log --oneline '
+alias glm='git log '
+alias glg='git log --graph --oneline '
+alias glgm='git log --graph '
+alias gls='git log --stat '
+
+alias gp='git push '
+alias gpo='git push origin '
+alias gpoc='git push origin `git branch --show-current` '
+
 
 function pm() {
     cmd=$1
