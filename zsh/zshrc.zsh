@@ -25,4 +25,4 @@ antigen apply
 #Antigen End
 
 PROMPT="$> "
-RPROMPT="%d"
+RPROMPT="%~"

@@ -6,6 +6,10 @@ alias dj='python3 manage.py '
 alias penv='pipenv '
 alias pty='poetry '
 
+alias uvi='uv init '
+alias uvr='uv run '
+alias uvrm='uv run main.py '
+
 alias ls='exa --color=always --group-directories-first' 
 alias la='exa -a --color=always --group-directories-first' 
 alias lla='exa -la --color=always --group-directories-first'  
@@ -45,6 +49,8 @@ alias tmks='tmux kill-session -t '
 alias rng='source ranger '
 
 # git 
+alias gi='git init '
+
 alias gb='git branch '
 alias gbc='git branch --show-current '
 alias gbl='git branch --list '
@@ -68,6 +74,8 @@ alias gls='git log --stat '
 alias gp='git push '
 alias gpo='git push origin '
 alias gpoc='git push origin `git branch --show-current` '
+
+alias gd='git diff '
 
 
 function pm() {
@@ -107,4 +115,12 @@ function aur() {
             paru -Syu $@
         ;;
     esac
+}
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
