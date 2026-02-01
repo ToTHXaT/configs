@@ -7,18 +7,24 @@ alias penv='pipenv '
 alias pty='poetry '
 
 alias uvi='uv init '
+alias uvil='uv init --lib '
 alias uvr='uv run '
-alias uvrm='uv run main.py '
+alias uvrp='uv run python '
+alias us='uv sync '
+alias usup='uv sync --upgrade-package '
+alias ua='uv add '
+alias uad='uv add --dev '
+alias ur='uv remove '
 
-alias ls='exa --color=always --group-directories-first' 
-alias la='exa -a --color=always --group-directories-first' 
-alias lla='exa -la --color=always --group-directories-first'  
-alias ll='exa -l --color=always --group-directories-first'  
-alias lt='exa -aT --color=always --group-directories-first' 
-alias ld='exa -D --color=always'
-alias lda='exa -Da --color=always'
-alias llda='exa -Dal --color=always'
-alias l.='exa -a | rg "^\."'
+alias ls='eza --color=always --group-directories-first' 
+alias la='eza -a --color=always --group-directories-first' 
+alias lla='eza -la --color=always --group-directories-first'  
+alias ll='eza -l --color=always --group-directories-first'  
+alias lt='eza -aT --color=always --group-directories-first' 
+alias ld='eza -D --color=always'
+alias lda='eza -Da --color=always'
+alias llda='eza -Dal --color=always'
+alias l.='eza -a | rg "^\."'
 
 alias rbt='reboot'
 alias sdw='shutdown now'
@@ -27,8 +33,8 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
  
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h'
+alias free='free -m'
 alias more=less
 alias xclip='xclip -selection c '
 alias sys='sudo systemctl '
@@ -58,11 +64,16 @@ alias gbD='git branch --delete '
 
 alias gs='git status --short --branch '
 alias gsl='git status '
+alias gsh='git show '
+
+alias gw='git switch '
+alias gwc='git switch -c '
 
 alias ga='git add '
 alias gai='git add -i '
 alias gaa='git add -a '
 
+alias gc='git commit '
 alias gcm='git commit -m '
 
 alias gl='git log --oneline '
@@ -74,6 +85,10 @@ alias gls='git log --stat '
 alias gp='git push '
 alias gpo='git push origin '
 alias gpoc='git push origin `git branch --show-current` '
+
+alias gl='git pull '
+alias glr='git pull --rebase '
+alias glra='git pull --rebase --autostash '
 
 alias gd='git diff '
 

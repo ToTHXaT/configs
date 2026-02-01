@@ -4,6 +4,6 @@ export PATH="$PATH:/opt/depot_tools"
 export PATH="$HOME/.bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
-export BROWSER=$(which firefox)
+export BROWSER=$(which brave)
 export TERMINAL=$(which alacritty)
 export EDITOR=$(which nvim)
