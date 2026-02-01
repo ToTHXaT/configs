@@ -15,6 +15,10 @@ map('v', '>', '>gv')
 
 map('n', '<leader>wsv', '<C-w>v')
 map('n', '<leader>wsh', '<C-w>s')
+map('n', '<leader>wgj', '<C-w>h')
+map('n', '<leader>wgk', '<C-w>j')
+map('n', '<leader>wgl', '<C-w>k')
+map('n', '<leader>wg;', '<C-w>l')
 map('n', '<leader>wsx', '<cmd>close<CR>')
 
 map('n', '<leader>i;', ':bp<CR>')
@@ -25,6 +29,8 @@ map('n', '<leader>tc', ':tabnew %<CR>')
 map('n', '<leader>tx', ':tabclose<CR>')
 map('n', '<leader>ti', ':tabp<CR>')
 map('n', '<leader>to', ':tabn<CR>')
+
+map('n', '<leader>bc', ':close')
 
 --map('n', '<leader>wrh+', ':resize +2<CR>')
 --map('n', '<leader>wrh-', ':resize -2<CR>')

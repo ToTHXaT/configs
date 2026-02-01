@@ -17,7 +17,8 @@ return {
 
             telescope.setup({
                 defaults = {
-                    path_display = {"smart"},
+                    path_display = {"absolute"},
+                    layout_strategy = "vertical",
                     mappings = {
                         i = {
                             ["<C-n>"] = false,
@@ -42,6 +43,7 @@ return {
             map("n", "<leader>fr", ":Telescope find_oldfiles<CR>")
             map("n", "<leader>fg", ":Telescope live_grep<CR>")
             map("n", "<leader>fc", ":Telescope grep_string<CR>")
+            map("n", "<leader>fb", ":Telescope buffers<CR>")
         end
     },
 }
