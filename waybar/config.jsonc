@@ -17,12 +17,19 @@
     ],
 
     "modules-right": [
+        "hyprland/language",
         "tray",
         "cpu_text",
         "cpu",
         "battery",
         "pulseaudio"
     ],
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "US",
+        "format-ru": "RU",
+    },
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -81,7 +88,7 @@
         "scroll-step": 5,
         "max-volume": 150,
         "format": "vol {volume}%",
-        "format-bluetooth": "vol {volume}%",
+        "format-bluetooth": "bvol {volume}%",
         "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false

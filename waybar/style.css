@@ -23,6 +23,7 @@ tooltip {
 #tray,
 #cpu,
 #memory,
+#language,
 #battery,
 #network,
 #pulseaudio {
@@ -74,6 +75,7 @@ tooltip {
 #cpu,
 #memory,
 #network,
+#language,
 #pulseaudio {
     background-color: #ddc7a1;
     border: 2px solid #c7ab7a;
